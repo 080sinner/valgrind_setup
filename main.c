@@ -99,9 +99,10 @@ int main(void)
 		DEFAULT;
 		system("touch Dockerfile");
 		system(">Dockerfile printf \"FROM ubuntu:16.04\n\nRUN apt-get update\nRUN apt-get upgrade -y\nRUN apt-get install g++ valgrind -y\nRUN apt-get update && apt-get install make\nRUN apt-get install libreadline6 libreadline6-dev\"");
-		if (system("docker build -t memory-test:0.1 ."))
-			return (printf("\033[1;31mCouldn't build Docker image\033[0m\n"));
+
 	}
+	if (system("docker build -t memory-test:0.1 ."))
+		return (printf("\033[1;31mCouldn't build Docker image\033[0m\n"));
 	GREEN;
 	printf("\nYou are ready to run execute_valgrind inside of the folder of your program.");
 	DEFAULT;
