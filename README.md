@@ -1,7 +1,7 @@
 # Step by Step:
-<h3> > Download Docker from Managed Software Center </h3>
-<h3> > make </h3>
-<h3> > Execute init_valgrind </h3>
-<h3> > Drag exec_valgrind into your Project Folder </h3>
-<h3> > Execute exec_valgrind </h3>
-<h3> > Enjoy the memory corruption </h3>
+<h5> > Download Docker from Managed Software Center </h5>
+<h5> > Make </h3>
+<h5> > Execute init_valgrind </h3>
+<h5> > Drag exec_valgrind into your Project Folder </h5>
+<h5> > Execute exec_valgrind </h3>
+<h5> > Enjoy the memory corruption </h3>
