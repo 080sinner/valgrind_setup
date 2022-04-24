@@ -74,13 +74,6 @@ int main(void)
 	char	c;
 
 	GREEN;
-	printf("If you already set Docker up press Y to exit and run exec_valgrind,\notherwise press any key to continue\n");
-	DEFAULT;
-	c = getchar();
-	fflush(STDIN_FILENO);
-	if (ft_tolower(c) == 'y')
-		return (0);
-	GREEN;
 	printf("If you did not start Docker yet press Y,\notherwise press any key to continue\n");
 	DEFAULT;
 	c = getchar();
