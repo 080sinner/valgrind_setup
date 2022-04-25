@@ -97,7 +97,7 @@ int main(void)
 	if (system("docker build -t memory-test:0.1 ."))
 		return (printf("\033[1;31m\nCouldn't build Docker image\033[0m\n"));
 	GREEN;
-	printf("\nYou are ready to run execute_valgrind inside of the folder of your program.");
+	printf("\nYou are ready to run exec_valgrind inside of the folder of your program.");
 	DEFAULT;
 	getchar();
 	return (0);
