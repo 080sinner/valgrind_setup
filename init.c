@@ -38,11 +38,11 @@ int	init_docker(void)
 	if (!check_if_42repo_exists())
 	{
 		GREEN;
-		printf("\nThis program requires the 42toolbox to work properly.\nIf you didn't clone it yet, press Y,\notherwise press any key to continue\n");
+		printf("\nThis program requires the 42toolbox to work properly.\nIf you already cloned it press Y,\notherwise press any key to continue\n");
 		DEFAULT;
 		char c = getchar();
 		fflush(STDIN_FILENO);
-		if (ft_tolower(c) == 'y')
+		if (ft_tolower(c) != 'y')
 		{
 			system("git clone https://github.com/alexandregv/42toolbox.git ~/42toolbox");
 			toolbox_path = ft_strdup("~/");
@@ -66,7 +66,10 @@ int	init_docker(void)
 	GREEN;
 	printf("\nStarting Docker ...\033[0m\n");
 	char *tmp = toolbox_path;
-	toolbox_path = ft_strjoin(tmp, "42toolbox/init_docker.sh");
+	if (tmp[ft_strlen(tmp) - 1] == '/')
+		toolbox_path = ft_strjoin(tmp, "42toolbox/init_docker.sh");
+	else
+		toolbox_path = ft_strjoin(tmp, "/42toolbox/init_docker.sh");
 	free(tmp);
 	if (system(toolbox_path))
 	{
@@ -88,11 +91,11 @@ int main(void)
 		system(">Dockerfile printf \"FROM ubuntu:16.04\n\nRUN apt-get update\nRUN apt-get upgrade -y\nRUN apt-get install g++ valgrind -y\nRUN apt-get update && apt-get install make\nRUN apt-get install libreadline6 libreadline6-dev\"");
 	}
 	GREEN;
-	printf("If you did not start Docker yet press Y,\notherwise press any key to continue\n");
+	printf("If you started Docker already press Y,\notherwise press any key to continue\n");
 	DEFAULT;
 	c = getchar();
 	fflush(STDIN_FILENO);
-	if (ft_tolower(c) == 'y')
+	if (ft_tolower(c) != 'y')
 		init_docker();
 	if (system("docker build -t memory-test:0.1 ."))
 		return (printf("\033[1;31m\nCouldn't build Docker image\033[0m\n"));
