@@ -77,8 +77,8 @@ int main(int argc, char *argv[])
 	RED;
 	if (argc < 2)
 		return (printf("Invalid usage:\033[0m\n\033[1;34m./exec_valgrind ./your_program arg1 arg2\033[0m\n\033[1;31mIf you want to see still reachable leaks use it like this:\n\033[1;34m./exec_valgrind -R ./your_program arg1 arg2\033[0m\n\033[1;31mIf you want to see line numbers add the gcc flag -g to your Makefile\033[0m\n"));
-	// if (!check_if_correct_dir())
-	// 	return (0);
+	if (!check_if_correct_dir())
+		return (0);
 	printf("Starting Valgrind ...\033[0m\n");
 	char *cmd_str = build_cmd_str(argv, &r_flag);
 	execute_valgrind_command(cmd_str, r_flag);
