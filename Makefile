@@ -6,14 +6,14 @@
 #    By: mac <mac@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 21:06:22 by eozben            #+#    #+#              #
-#    Updated: 2022/04/24 18:36:50 by mac              ###   ########.fr        #
+#    Updated: 2022/04/25 05:21:27 by mac              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = init_valgrind
 FLAGS = -Wall -Wextra -Werror
 INC = setup_val.h
-SRCS = main.c 
+SRCS = init.c
 OBJ_PATH = ./objs/
 OBJS = $(patsubst %.c,$(OBJ_PATH)%.o,$(SRCS))
 LIB = -Llibft -lft

@@ -41,7 +41,6 @@ int	check_if_correct_dir(void)
 		printf("Please drag this executable into the folder of your program and run it again.\n");
 		DEFAULT;
 		fclose(file);
-		getchar();
 		return (0);
 	}
 	else
