@@ -6,4 +6,4 @@
 <h5> > Run make fclean in your Project Folder </h5>
 <h5> > Execute exec_valgrind </h3>
 <h5> > Enjoy the memory corruption </h3> <br>
-<h16> Whenever you shut down your Mac you have to build the Docker image again,<br>so you can just run init_valgrind again and skip all of the first Steps </h16>
+<h16> Whenever you shut down your Mac you have to run init_valgrind again </h16
