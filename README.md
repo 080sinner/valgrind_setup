@@ -7,3 +7,4 @@
 <h5> > Execute exec_valgrind </h3>
 <h5> > Enjoy the memory corruption </h3> <br>
 <h16> Whenever you shut down your Mac you have to run init_valgrind again </h16
+Thanks to: <a href="https://github.com/JeremieSiller"Jeremie</a> for providing the tutorial to set up Docker, which I used in my code :)
