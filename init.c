@@ -76,7 +76,7 @@ int	init_docker(void)
 		free(toolbox_path);
 		exit(printf("\033[1;31m\nCouldn't start Docker\033[0m\n"));
 	}
-	sleep(30);
+	sleep(20);
 	return (0);
 }
 
@@ -99,7 +99,7 @@ int main(void)
 	if (ft_tolower(c) != 'y')
 		init_docker();
 	if (system("docker build -t memory-test:0.1 ."))
-		return (printf("\033[1;31m\nCouldn't build Docker image\033[0m\n"));
+		return (printf("\033[1;31m\nCouldn't build Docker image\nIf you get \"ERRO[0000] failed to dial gRPC\" try restarting init_valgrind without restarting Docker\033[0m\n"));
 	GREEN;
 	printf("\nYou are ready to run exec_valgrind inside of the folder of your program.");
 	DEFAULT;
