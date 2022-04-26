@@ -76,6 +76,7 @@ int	init_docker(void)
 		free(toolbox_path);
 		exit(printf("\033[1;31m\nCouldn't start Docker\033[0m\n"));
 	}
+	sleep(40);
 	return (0);
 }
 
